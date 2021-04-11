@@ -1,0 +1,110 @@
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    /* ### Neutral */
+    /* (paragraphs) */
+    --transparentWhite : hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --veryLightGray : hsl(0, 0%, 95%);
+}
+body {
+    margin: 0;
+    /* Fonts: Big Shoulders Display, Lexend Deca */
+    /* font-family: 'Big Shoulders Display', sans-serif; 700 */
+    font-family: 'Lexend Deca', sans-serif; /*400*/
+    font-weight: 400;
+    font: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main {
+    width: 70%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card {
+    padding: 3rem ;
+}
+.card h3 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif; 
+    color: var(--veryLightGray);
+    font-size: 2.7rem;
+}
+.card img {
+    display: block;
+    width: 70px;
+}
+.card button {
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 1rem 2rem;
+}
+.card p {
+    color: var(--transparentWhite);
+    line-height: 1.5;
+    margin-bottom: 7rem;
+    font-size: 0.938;
+}
+.card:nth-child(1) {
+    background-color: var(--brightOrange);
+}
+.card:nth-child(1) button {
+    color: var(--brightOrange);
+}
+.card:nth-child(2) {
+    background: var(--darkCyan);
+}
+.card:nth-child(2) button {
+    color: var(--darkCyan);
+}
+.card:nth-child(3) {
+    background: var(--veryDarkCyan);
+}
+.card:nth-child(3) button {
+    color: var(--veryDarkCyan);
+}
+.card button:hover {
+    cursor: pointer;
+    border: 2px solid var(--veryLightGray);
+    color: var(--veryLightGray);
+}
+@media screen and (max-width: 768px) {
+    .main {
+        flex-wrap: wrap;
+        width: 50%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .card p {
+        margin-bottom: 3rem;
+    }
+}
+@media screen and (max-width: 376px){
+    .main {
+        width: 80%;
+    }
+    .card {
+        padding: 2.5rem;
+    }
+    .card h3 {
+        font-size: 2rem;
+    }
+    .card img {
+        width: 50px;
+    }
+    .card p {
+        font-size: .8;
+    }
+    .card button {
+        border-radius: 25px;
+        padding: 1rem 1.5rem;
+    }
+}
